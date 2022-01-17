@@ -1,3 +1,9 @@
+# Copyright (c) 2018 The Harmonica Developers.
+# Distributed under the terms of the BSD 3-Clause License.
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# This code is part of the Fatiando a Terra project (https://www.fatiando.org)
+#
 """
 Earth Gravity
 =============
@@ -7,8 +13,9 @@ This is the magnitude of the gravity vector of the Earth (gravitational
 spacing at 10km ellipsoidal height. It was generated from the spherical
 harmonic model EIGEN-6C4 [Forste_etal2014]_.
 """
-import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
+
 import harmonica as hm
 
 # Load the gravity grid
@@ -26,5 +33,4 @@ plt.colorbar(
 )
 ax.set_title("Gravity of the Earth (EIGEN-6C4)")
 ax.coastlines()
-plt.tight_layout()
 plt.show()

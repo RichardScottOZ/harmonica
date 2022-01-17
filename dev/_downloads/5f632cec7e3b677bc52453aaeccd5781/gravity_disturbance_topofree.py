@@ -1,3 +1,9 @@
+# Copyright (c) 2018 The Harmonica Developers.
+# Distributed under the terms of the BSD 3-Clause License.
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# This code is part of the Fatiando a Terra project (https://www.fatiando.org)
+#
 """
 Topography-free (Bouguer) Gravity Disturbances
 ==============================================
@@ -19,10 +25,11 @@ ellipsoid. Since we want to remove the masses between the surface of the Earth
 and ellipsoid, we need to add the geoid height to the topography before Bouguer
 correction.
 """
-import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
-import xarray as xr
 import boule as bl
+import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
+import xarray as xr
+
 import harmonica as hm
 
 # Load the global gravity, topography, and geoid grids
@@ -59,5 +66,4 @@ plt.colorbar(
 )
 ax.set_title("Topography-free (Bouguer) gravity of disturbance of the Earth")
 ax.coastlines()
-plt.tight_layout()
 plt.show()

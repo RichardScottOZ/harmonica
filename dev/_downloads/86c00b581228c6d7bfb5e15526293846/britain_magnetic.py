@@ -1,3 +1,9 @@
+# Copyright (c) 2018 The Harmonica Developers.
+# Distributed under the terms of the BSD 3-Clause License.
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# This code is part of the Fatiando a Terra project (https://www.fatiando.org)
+#
 """
 Total Field Magnetic Anomaly from Great Britain
 ================================================
@@ -23,11 +29,12 @@ See the original data for more processing information.
 If the file isn't already in your data directory, it will be downloaded
 automatically.
 """
-import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
-import verde as vd
-import harmonica as hm
+import matplotlib.pyplot as plt
 import numpy as np
+import verde as vd
+
+import harmonica as hm
 
 # Fetch the data in a pandas.DataFrame
 data = hm.datasets.fetch_britain_magnetic()
@@ -60,5 +67,4 @@ plt.colorbar(
 ax.set_extent(vd.get_region((data.longitude, data.latitude)))
 ax.gridlines(draw_labels=True)
 ax.coastlines(resolution="50m")
-plt.tight_layout()
 plt.show()

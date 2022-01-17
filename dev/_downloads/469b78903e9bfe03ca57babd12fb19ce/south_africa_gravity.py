@@ -1,3 +1,9 @@
+# Copyright (c) 2018 The Harmonica Developers.
+# Distributed under the terms of the BSD 3-Clause License.
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# This code is part of the Fatiando a Terra project (https://www.fatiando.org)
+#
 """
 Land Gravity Data from South Africa
 ===================================
@@ -12,9 +18,10 @@ longitude, latitude, elevation (above sea level) and gravity(mGal). See the
 documentation for :func:`harmonica.datasets.fetch_south_africa_gravity` for
 more information.
 """
-import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
 import verde as vd
+
 import harmonica as hm
 
 # Fetch the data in a pandas.DataFrame
@@ -39,5 +46,4 @@ plt.colorbar(
 ax.set_extent(vd.get_region((data.longitude, data.latitude)))
 ax.gridlines(draw_labels=True)
 ax.coastlines()
-plt.tight_layout()
 plt.show()

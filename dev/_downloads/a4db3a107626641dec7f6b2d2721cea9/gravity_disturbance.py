@@ -1,3 +1,9 @@
+# Copyright (c) 2018 The Harmonica Developers.
+# Distributed under the terms of the BSD 3-Clause License.
+# SPDX-License-Identifier: BSD-3-Clause
+#
+# This code is part of the Fatiando a Terra project (https://www.fatiando.org)
+#
 """
 Gravity Disturbances
 ====================
@@ -9,9 +15,10 @@ use the :meth:`boule.Ellipsoid.normal_gravity` function from :mod:`boule` to
 calculate the global gravity disturbance of the Earth using our sample gravity
 data.
 """
-import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
 import boule as bl
+import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
+
 import harmonica as hm
 
 # Load the global gravity grid
@@ -36,5 +43,4 @@ plt.colorbar(
 )
 ax.set_title("Gravity of disturbance of the Earth")
 ax.coastlines()
-plt.tight_layout()
 plt.show()
